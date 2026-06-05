@@ -1,6 +1,21 @@
-# Autoelogio-Doc
+<p align="center">
+  <img src="https://img.shields.io/badge/App-Autoelogio%20Doc-blue?style=for-the-badge" alt="app badge" />
+  <img src="https://img.shields.io/badge/Stack-Next.js%20%26%20TypeScript-black?style=for-the-badge" alt="stack" />
+  <img src="https://img.shields.io/badge/Version-1.0.0-purple?style=for-the-badge" alt="version" />
+</p>
 
-Este projeto é um aplicativo web desenvolvido para auxiliar profissionais a registrarem e acompanharem suas conquistas, elogios, feedbacks positivos e realizações — um "Brag Document" moderno e interativo.
+<h1 align="center">🎯 Autoelogio-Doc</h1>
+
+<p align="center">
+  <strong>Aplicativo web desenvolvido para auxiliar profissionais a registrarem e acompanharem suas conquistas, elogios, feedbacks positivos e realizações — um "Brag Document" moderno e interativo.</strong>
+</p>
+
+<p align="center">
+  <strong>Autor:</strong> <a href="https://github.com/andrelemos2">Andre Lemos</a> · 
+  <a href="https://www.linkedin.com/in/andre-lemos-9b16b924/">LinkedIn</a>
+</p>
+
+---
 
 ## Características
 
