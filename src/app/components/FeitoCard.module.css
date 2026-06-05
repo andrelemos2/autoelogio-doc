@@ -1,0 +1,204 @@
+.card {
+  position: relative;
+  background: rgba(24, 24, 27, 0.45);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Efeito Glow premium correspondente à categoria no hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--category-color, var(--primary));
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 
+              0 0 20px rgba(var(--category-color-rgb), 0.15);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(var(--category-color-rgb), 0.1);
+  border: 1px solid rgba(var(--category-color-rgb), 0.2);
+  color: var(--category-color, var(--foreground));
+  transition: all 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  background: var(--category-color, var(--primary));
+  color: #000;
+  border-color: transparent;
+  box-shadow: 0 0 12px rgba(var(--category-color-rgb), 0.4);
+}
+
+.categoryTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(var(--category-color-rgb), 0.08);
+  border: 1px solid rgba(var(--category-color-rgb), 0.15);
+  color: var(--category-color, var(--text-muted));
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Estilo para conquistas/projetos (Impacto) */
+.impactBox {
+  margin-top: 4px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--category-color);
+  font-size: 0.9rem;
+}
+
+.impactLabel {
+  font-weight: 700;
+  color: var(--foreground);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.impactContent {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Estilo específico para feedbacks */
+.feedbackBox {
+  margin-top: 4px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(var(--category-color-rgb), 0.03);
+  border: 1px dashed rgba(var(--category-color-rgb), 0.25);
+  position: relative;
+}
+
+.quoteContent {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--foreground);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.feedbackAuthor {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--category-color);
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.referenceLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.referenceLink:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground);
+}
+
+.deleteButton:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
